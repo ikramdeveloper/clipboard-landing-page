@@ -1,0 +1,82 @@
+.access {
+  &__container {
+    @include flex-column;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+
+    @include desktop {
+      max-width: 50rem;
+    }
+  }
+
+  &__text-container {
+    margin-bottom: 2rem;
+
+    @include desktop {
+      max-width: 50rem;
+    }
+  }
+
+  &__image-container {
+    margin: 2rem auto;
+
+    @include desktop {
+      max-width: 50rem;
+    }
+  }
+
+  &__info {
+    @include desktop {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__cards-container {
+    @include desktop {
+      max-width: 144rem;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__card {
+    margin: 3rem 0;
+    display: grid;
+    grid-template-rows: 5rem 4rem 1fr;
+
+    @include desktop {
+      margin: 0;
+      width: 33%;
+    }
+  }
+
+  &__card:not(:last-child) {
+    @include desktop {
+      margin-right: 2rem;
+    }
+  }
+
+  &__card-img {
+    margin: 0 auto;
+
+    @include desktop {
+      align-self: center;
+    }
+  }
+
+  &__card-title {
+    @include desktop {
+      line-height: 4rem;
+    }
+  }
+
+  &__card:first-child {
+    margin-top: 2rem;
+
+    @include desktop {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.download {
+  margin-bottom: 6rem;
+
+  @include desktop {
+    margin-bottom: 10rem;
+  }
+
+  &__container {
+    @include flex-column;
+
+    @include desktop {
+      max-width: 50rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

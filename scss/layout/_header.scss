@@ -1,0 +1,36 @@
+.header {
+  min-height: 100vh;
+  background-image: url("/images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include desktop {
+    min-height: auto;
+    background-image: url("/images/bg-header-desktop.png");
+    padding-bottom: 10rem;
+  }
+
+  &__container {
+    @include flex-column;
+
+    @include desktop {
+      max-width: 50rem;
+    }
+  }
+
+  &__logo {
+    padding: 2rem;
+
+    @include desktop {
+      padding: 4rem;
+    }
+  }
+
+  &__text {
+    margin: 1rem 0;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

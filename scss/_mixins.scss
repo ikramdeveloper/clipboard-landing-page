@@ -1,0 +1,22 @@
+/* Mixins */
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Mixins - media queries */
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width-1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

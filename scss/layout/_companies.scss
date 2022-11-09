@@ -1,0 +1,25 @@
+.companies {
+  &__container {
+    @include flex-column;
+
+    @include desktop {
+      max-width: 144rem;
+      flex-direction: row;
+      justify-content: center;
+      margin: 7rem auto;
+    }
+  }
+
+  &__logo {
+    margin: 3rem 0;
+
+    @include desktop {
+      padding: 1rem;
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+}

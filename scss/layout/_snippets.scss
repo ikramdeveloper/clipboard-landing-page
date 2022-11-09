@@ -1,0 +1,46 @@
+.snippets {
+  &__container {
+    @include flex-column;
+
+    @include desktop {
+      max-width: 144rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas: "intro intro" "desktop cards";
+    }
+  }
+
+  &__text-container {
+    @include desktop {
+      grid-area: intro;
+      max-width: 50rem;
+      margin: 0 auto 2rem auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__image-container {
+    margin: 2rem auto;
+
+    @include desktop {
+      grid-area: desktop;
+    }
+  }
+
+  &__benefits {
+    @include desktop {
+      grid-area: cards;
+      margin-left: 3rem;
+      text-align: left;
+      max-width: 30rem;
+    }
+  }
+
+  &__card {
+    margin-bottom: 1rem;
+  }
+}

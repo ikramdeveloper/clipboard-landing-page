@@ -1,0 +1,48 @@
+.footer {
+  background-color: rgba($grayish-blue, 0.2);
+  padding: 1.2rem 0;
+
+  &__container {
+    @include flex-column;
+
+    @include desktop {
+      max-width: 144rem;
+      display: grid;
+      grid-template-columns: 7rem auto auto;
+    }
+  }
+
+  &__logo {
+    width: 5rem;
+    height: 5rem;
+    background-image: url("/images/logo.svg");
+    background-size: contain;
+    margin: 2rem 0;
+  }
+
+  &__socials {
+    margin: 2rem 0;
+
+    @include desktop {
+      text-align: right;
+    }
+  }
+
+  &__social {
+    @include desktop {
+      &:hover {
+        & > path {
+          fill: $strong-cyan;
+        }
+      }
+    }
+  }
+
+  &__social:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__social-path {
+    transition: 0.4s;
+  }
+}
